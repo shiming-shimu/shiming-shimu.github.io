@@ -1,1 +1,1 @@
-# shushe.github.io
+# shushe.xyz
