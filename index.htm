@@ -5,8 +5,30 @@
     <link rel="shortcut icon" href="img/favoicon.ico">
     <link rel="stylesheet" href="css/card.css">
     <link rel="stylesheet" href="css/top.css">
+    <link rel="stylesheet" href="css/passage.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/card.js"></script>
+    <script>
+        function addCard(){
+            $(".passages .item").click(function () {
+                $(this).hide();
+                var info = $.parseJSON($(this).attr("data-info"));
+                $("body").html($("body").html() + ' \
+<div class="card" style="width: 350px; top: 100px;" data-info=\'{"title": "'+ info["title"] +'", "user": "'+ info["user"] +'", "date": "'+ info["date"] +'", "preview": "'+ info["preview"] +'"}\'> \
+<div class="card-top"> \
+    <div class="card-circle-red"></div> \
+    <div class="card-circle-yellow"></div> \
+    <div class="card-circle-green"></div> \
+    <div class="card-title"> '+ info["title"] +' </div> \
+</div> \
+<div class="card-body">'+info["preview"]+'</div>');
+                setCard()
+        });
+        }
+        $(document).ready(function () {
+           addCard();
+        });
+    </script>
     <style></style>
 </head>
 <body>
@@ -18,8 +40,17 @@
         <h1>欢迎光临寒舍</h1>
         <h1>——</h1>
     </div>
-    <div class="passages"></div>
-    <div class="hot"></div>
+    <div class="passages">
+        <div class="item"  data-info='{"title": "title", "user": "shiming", "date": "2020.12.6", "preview": "你好"}'>
+            <h2>title</h2>
+            <div class="info">
+                <span class="user">shiming</span>
+                <span class="date">2020.12.6</span>
+                <p class="preview">你好</p>
+            </div>
+        </div>
+    </div>
+    <div class="type"></div>
     <!-- <div class="card" style="width: 350px; top: 100px;">
         <div class="card-top">
             <div class="card-circle-red"></div>
