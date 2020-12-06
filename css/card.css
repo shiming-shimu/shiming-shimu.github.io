@@ -1,0 +1,54 @@
+.card {
+    font-size: 14px;
+    color: #6a737d;
+    position: absolute;
+}
+.card .card-top {
+    height: 15px;
+    width: 100%;
+    background-color: #E3E3E3;
+    padding: 8px 20px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.card .card-body {
+    background-color: #EEEEEE;
+    width: 100%;
+    font-size: 13px;
+    color: #666666;
+    overflow: auto;
+    padding: 20px;
+    font-family: "Source Code Pro", Consolas, Menlo, Monaco, "Courier New", monospace;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.card .card-top .card-circle-red{
+    float: left;
+    margin-right: 10px;
+    width:13px;
+    height:13px;
+    background-color:#FF5F57;
+    border-radius:50px;
+}
+.card .card-top .card-circle-yellow{
+    float: left;
+    margin-right: 10px;
+    width:13px;
+    height:13px;
+    background-color:#FFBD2E;
+    border-radius:50px;
+}
+.card .card-top .card-circle-green{
+    float: left;
+    margin-right: 10px;
+    width:13px;
+    height:13px;
+    background-color:#28CA42;
+    border-radius:50px;
+}
+.card .card-top .card-title{
+    font-size: 14px;
+    color: #666666;
+    font-family: "Source Code Pro", Consolas, Menlo, Monaco, "Courier New", monospace;   
+    margin-left: calc(50% - 39px);
+}
