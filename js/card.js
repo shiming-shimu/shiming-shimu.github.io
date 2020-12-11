@@ -43,7 +43,6 @@ function setCardEvent() {
     $(".card .card-top .card-circle-yellow").click(function () { 
         $(this).parent().parent().hide();
         $("#"+$(this).parent().parent().attr("id").slice(5)).show();
-        setPassageEvent()
      })
      //绿色最大化按钮
      $(".card .card-top .card-circle-green").click(function () { 
@@ -56,7 +55,6 @@ function setPassageEvent() {
     $(".passages .item").click(function(){
         $(this).hide();
         $("#card-" + $(this).attr("id")).show();
-        setCardEvent()
     })
 }
 
