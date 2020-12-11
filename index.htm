@@ -9,11 +9,11 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/card.js"></script>
     <script>
-        function addCard(){
-            $(".passages .item").click(function () {
-                $(this).hide();
-                var info = $.parseJSON($(this).attr("data-info"));
-                $("body").html($("body").html() + ' \
+        function addCards(){
+            $.getJSON("passages/list.json",function(data){alert(data)})
+            $(this).hide();
+            var info = $.parseJSON($(this).attr("data-info"));
+            $("body").html($("body").html() + ' \
 <div class="card" style="width: 350px; top: 100px;" data-info=\'{"title": "'+ info["title"] +'", "user": "'+ info["user"] +'", "date": "'+ info["date"] +'", "preview": "'+ info["preview"] +'"}\'> \
 <div class="card-top"> \
     <div class="card-circle-red"></div> \
@@ -22,11 +22,9 @@
     <div class="card-title"> '+ info["title"] +' </div> \
 </div> \
 <div class="card-body">'+info["preview"]+'</div>');
-                setCard()
-        });
         }
         $(document).ready(function () {
-           addCard();
+           addCards();
         });
     </script>
     <style></style>
