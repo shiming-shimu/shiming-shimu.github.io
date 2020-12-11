@@ -21,7 +21,10 @@ function addCard(){
                 </div> \
                 <div class="card-body">'+info["des"]+'</div>');
             }
-        )}
+        )
+        setCardEvent()
+        setPassageEvent()
+        }
     );
 }
 
