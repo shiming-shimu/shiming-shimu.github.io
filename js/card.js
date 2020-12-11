@@ -19,7 +19,7 @@ function addCard(){
                     <div class="card-circle-green"></div> \
                     <div class="card-title"> '+ info["title"] +' </div> \
                 </div> \
-                <div class="card-body">'+info["des"]+'</div>');
+                <div class="card-body">'+ info["des"] +'</div>');
             }
         )
         setCardEvent()

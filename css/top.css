@@ -1,16 +1,16 @@
 .bar{
-    color: #181818;
-    width: calc(100%-130px);
+    color: #333333;
+    width: calc(100%-160px);
     top: 0px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 80px;
     padding-right: 30px;
     /* position: fixed; */
     background-color: #FFFFFF;
 }
 .bar .title{
-    font-size: 30px;
+    font-size: 28px;
 }
 .backimg{
     background-image: url('../img/backimg.jpg'); 
