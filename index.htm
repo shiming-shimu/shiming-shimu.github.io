@@ -9,22 +9,32 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/card.js"></script>
     <script>
-        function addCards(){
-            $.getJSON("shushe.xyz/passages/list.json",function(data){alert(data)})
-            $(this).hide();
-            var info = $.parseJSON($(this).attr("data-info"));
-            $("body").html($("body").html() + ' \
-<div class="card" style="width: 350px; top: 100px;" data-info=\'{"title": "'+ info["title"] +'", "user": "'+ info["user"] +'", "date": "'+ info["date"] +'", "preview": "'+ info["preview"] +'"}\'> \
-<div class="card-top"> \
-    <div class="card-circle-red"></div> \
-    <div class="card-circle-yellow"></div> \
-    <div class="card-circle-green"></div> \
-    <div class="card-title"> '+ info["title"] +' </div> \
-</div> \
-<div class="card-body">'+info["preview"]+'</div>');
-        }
         $(document).ready(function () {
-           addCards();
+            //添加卡片和文章
+            $.getJSON("passages/list.json",
+                function(data){data.forEach(info => {
+                    $(".passages").html($(".passages").html()+'\
+                        <div class="item" id="'+info["path"]+'" data-info=\'{"title": "'+ info["title"] +'", "user": "'+ info["user"] +'", "date": "'+ info["date"] +'", "preview": "'+ info["des"] +'", "path": "'+ info["path"] +'"}\'>\
+                            <h2>'+ info["title"] +'</h2>\
+                            <div class="info">\
+                                <span class="user">'+ info["user"] +'</span>\
+                                <span class="date">'+ info["date"] +'</span>\
+                                <p class="preview">'+ info["des"] +'</p>\
+                            </div>\
+                        </div>');
+                    $("body").html($(".cards").html() + ' \
+                        <div class="card" id="card-'+info["path"]+'" style="display: none;width: 350px; top: 100px;" data-info=\'{"title": "'+ info["title"] +'", "user": "'+ info["user"] +'", "date": "'+ info["date"] +'", "preview": "'+ info["des"] +'", "path": "'+ info["path"] +'"}\'> \
+                        <div class="card-top"> \
+                            <div class="card-circle-red"></div> \
+                            <div class="card-circle-yellow"></div> \
+                            <div class="card-circle-green"></div> \
+                            <div class="card-title"> '+ info["title"] +' </div> \
+                        </div> \
+                        <div class="card-body">'+info["des"]+'</div>');
+                    }
+                )}
+            );
+            //
         });
     </script>
     <style></style>
@@ -38,16 +48,8 @@
         <h1>欢迎光临寒舍</h1>
         <h1>——</h1>
     </div>
-    <div class="passages">
-        <div class="item"  data-info='{"title": "title", "user": "shiming", "date": "2020.12.6", "preview": "你好"}'>
-            <h2>title</h2>
-            <div class="info">
-                <span class="user">shiming</span>
-                <span class="date">2020.12.6</span>
-                <p class="preview">你好</p>
-            </div>
-        </div>
-    </div>
+    <div class="passages"></div>
+    <div class="cards"></div>
     <div class="type"></div>
     <!-- <div class="card" style="width: 350px; top: 100px;">
         <div class="card-top">
