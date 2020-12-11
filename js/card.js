@@ -42,19 +42,21 @@ function setCardEvent() {
     //黄色最小化按钮
     $(".card .card-top .card-circle-yellow").click(function () { 
         $(this).parent().parent().hide();
+        $("#"+$(this).parent().parent().attr("id").slice(5)).show();
+        setPassageEvent()
      })
      //绿色最大化按钮
      $(".card .card-top .card-circle-green").click(function () { 
         $(this).parent().parent().hide();
-        
      })
 }
 
 //设置文章事件
 function setPassageEvent() {
     $(".passages .item").click(function(){
-        $( ($.parseJSON($(this).attr("data-info")))["id"] ).hide();
-        $("id-" + ($.parseJSON($(this).attr("data-info")))["id"] ).show();
+        $(this).hide();
+        $("#card-" + $(this).attr("id")).show();
+        setCardEvent()
     })
 }
 
