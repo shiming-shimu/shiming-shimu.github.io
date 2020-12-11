@@ -10,7 +10,7 @@
     <script src="js/card.js"></script>
     <script>
         function addCards(){
-            $.getJSON("passages/list.json",function(data){alert(data)})
+            $.getJSON("shushe.xyz/passages/list.json",function(data){alert(data)})
             $(this).hide();
             var info = $.parseJSON($(this).attr("data-info"));
             $("body").html($("body").html() + ' \
