@@ -1,49 +1,129 @@
-<!DOCTYPE html>
+<!DOCUMENT html>
 <html>
 <head>
-    <title>书舍</title>
-    <link rel="shortcut icon" href="img/favoicon.ico">
-    <link rel="stylesheet" href="css/card.css">
-    <link rel="stylesheet" href="css/top.css">
-    <link rel="stylesheet" href="css/passage.css">
-    <script src="js/jquery.min.js"></script>
-    <script src="js/card.js"></script>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <script>
-        $(document).ready(function () {
-            //添加卡片和文章
-            addCard()
-        });
-    </script>
-    <style></style>
+    <script src="jquery-3.6.0.min.js"></script>
+    <style>
+        @font-face {
+            font-family: WideBlack;
+            src: url("厚黑体.ttf");
+        }
+        @font-face {
+            font-family: SnowFont;
+            src: url("雪花体.ttf");
+        }
+        body{
+            background-image: url("background.jpeg");
+            background-repeat:no-repeat;
+            background-size: 100%;
+        }
+        .title{
+            margin-left: auto;
+            width: 98%;
+            height: 50px;
+            padding: 10px;
+        }
+        .title::after{
+            content: "";
+            background-color: rgba(200, 230, 255, 0.5);
+            position: absolute;
+            left: 5px;
+            margin-left: auto;
+            width: 98%;
+            height: 50px;
+            padding: 10px;
+            -webkit-filter: blur(5px);
+            -moz-filter: blur(5px);
+            -ms-filter: blur(5px);
+            -o-filter: blur(5px);
+            filter: blur(5px);
+            z-index: -1;
+        }
+        .title .topic{
+            font-family: 'WideBlack';
+            font-size: 50px;
+            margin-top: 10px;
+        }
+        .title img{
+            margin-top: 10px;
+            width: 40px;
+        }
+        .title .project{
+            float: right;
+            font-family: 'WideBlack';
+            font-size: 25px;
+            margin-right: 5px;
+        }
+
+        .main_page{
+            padding: 5px;
+        } 
+
+        .main_page::after{
+            content: "";
+            padding: 5px;
+            margin: auto;
+            width: 98%;
+            height: 600px;
+            position: absolute;
+            top: 90px;
+            background-color: rgba(230, 200, 255, 0.5);
+            -webkit-filter: blur(5px);
+            -moz-filter: blur(5px);
+            -ms-filter: blur(5px);
+            -o-filter: blur(5px);
+            filter: blur(5px);
+            z-index: -1;
+        }
+
+        .usage p{
+            font-family: "SnowFont";
+            font-size: 18px;
+        }
+
+        .payment img{
+            height: 450px;
+            margin-top: 10px;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        .end p{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: rgb(100, 100, 100);
+        }
+        .end{
+            width: 100%;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <div id="TopBar" class="bar">
-        <a id="title" class="title">书舍 - 一个小博客</a>
-        <div id="search" class="btn"> <img> </div>
+    <div class="title">
+        <img src="礼品.png">
+        <span class="topic">ACG集资网</span>
+        <span class="project">
+            暑假服务器集资计划   
+        </span>
     </div>
-    <div class="backimg">
-        <h1>欢迎光临寒舍</h1>
-        <h1>——</h1>
-    </div>
-    <div class="passages"></div>
-    <div class="cards"></div>
-    <div class="type"></div>
-    <!-- <div class="card" style="width: 350px; top: 100px;">
-        <div class="card-top">
-            <div class="card-circle-red"></div>
-            <div class="card-circle-yellow"></div>
-            <div class="card-circle-green"></div>
-            <div class="card-title"> 你好，游客！ </div>
-        </div>
-        <div class="card-body">
-            Wait,i know you<br>
-            keep hungry keep foolish<br>
-            苍苍之天不可得久视，堂堂之地不可得久履，道此绝矣！<br/>
-            告后世及其孙子，忽忽锡锡，恐见故里，毋负天地，<br>
-            更亡更在，去如舍庐，下敦闾里！人固当死，慎毋敢佞。
-        </div>
-    </div> -->
 
+    <div class="main_page">
+        <div class="usage">
+            <p>想要和朋友一起玩游戏不受IP限制吗？</p>
+            <p>想要玩mc服务器延迟极低吗？</p>
+            <p>想要暑假欢乐游戏吗？</p>
+            <p>来集资把！</p>
+            <p>高配低价服务器，买不了吃亏，买不了上当！</p>
+            
+        </div>
+        <span><div class="payment">
+            <span><img src="9()A@94(LEX0Q$O5X~{(WG8.jpg"></span>
+            <img src="wx.JPG">
+            <img src="zfb.JPG">
+        </div></span>
+    </div>
+
+    <div class="end">
+        <p>注：图中是首月半价的价格，第二月48</p>
+    </div>
 </body>
 </html>
